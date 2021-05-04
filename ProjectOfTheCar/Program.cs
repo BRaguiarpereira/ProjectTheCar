@@ -23,7 +23,9 @@ namespace ProjectOfTheCar
 
             CarRental carRental = new CarRental(start, finish, new Vehicle(model));
 
-            RentalService rentalService = new RentalService(hour, day);
+            // Passando a dependecia BrasilTaxService == ITaxService do contructor do RentalService por meio
+            // De Upcasting pois BrazilTaxService e um subtipo
+            RentalService rentalService = new RentalService(hour, day,new BrazilTaxService());
 
             rentalService.ProcessInvoice(carRental);
 

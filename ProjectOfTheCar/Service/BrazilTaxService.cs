@@ -1,7 +1,9 @@
 ﻿namespace ProjectOfTheCar.Service
 {
-    class BrazilTaxService
+    // Brasil Tax Service realiza  uma interface ITaxService
+    class BrazilTaxService : ITaxService
     {
+        
         public double Tax(double amount)
         {
             if (amount <= 100.0)
